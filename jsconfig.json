@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*"],
+      "actions/*": ["src/actions/*"],
+      "api/*": ["src/api/*"],
+      "components/*": ["src/components/*"],
+      "constants/*": ["src/constants/*"],
+      "containers/*": ["src/containers/*"],
+      "hooks/*": ["src/hooks/*"],
+      "locales/*": ["src/locales/*"],
+      "utils/*": ["src/utils/*"],
+      "reducers/*": ["src/reducers/*"],
+      "selectors/*": ["src/selectors/*"],
+      "store/*": ["src/store/*"],
+      "styles/*": ["src/styles/*"],
+      "fixtures": ["../cypress/fixtures"],
+      "stubs": ["../cypress/stubs"],
+      "cypressConstants": ["../cypress/support/constants"],
+      "reusableTests": ["../cypress/support/reusableTests"],
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,9 @@
+language: node_js
+cache: yarn
+node_js:
+  - "10.16.0"
+script:
+  - yarn lint
+  - yarn cypress install
+  - ENV=cypress yarn start &
+  - yarn test:ci
