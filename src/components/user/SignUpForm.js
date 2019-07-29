@@ -5,16 +5,23 @@ import { injectIntl, intlShape, defineMessages, FormattedMessage } from 'react-i
 
 import Loading from 'components/common/Loading';
 import Input from 'components/common/Input';
+import Select from 'components/common/Select';
 import { validations, signUp } from 'utils/constraints';
 
 const messages = defineMessages({
+  name: { id: 'login.form.name' },
   email: { id: 'login.form.email' },
   password: { id: 'login.form.password' },
-  passConfirmation: { id: 'signup.form.passconfirmation' }
+  passPlaceholder: { id: 'signup.form.passpalceholder' },
+  passConfirmation: { id: 'signup.form.passconfirmation' },
+  gender: { id: 'login.form.gender' }
 });
 
 export const SignUpForm = ({ handleSubmit, submitting, intl }) => (
   <form onSubmit={handleSubmit}>
+    <div>
+      <Field name="name" label={intl.formatMessage(messages.name)} component={Input} type="text" />
+    </div>
     <div>
       <Field
         name="email"
@@ -29,6 +36,7 @@ export const SignUpForm = ({ handleSubmit, submitting, intl }) => (
         label={intl.formatMessage(messages.password)}
         component={Input}
         type="password"
+        placeholder={intl.formatMessage(messages.passPlaceholder)}
       />
     </div>
     <div>
@@ -39,10 +47,23 @@ export const SignUpForm = ({ handleSubmit, submitting, intl }) => (
         type="password"
       />
     </div>
-    <button type="submit">
-      <FormattedMessage id="login.form.submit" />
-    </button>
-    {submitting && <Loading />}
+    <div>
+      <Field
+        name="gender"
+        label={intl.formatMessage(messages.gender)}
+        component={Select}
+        type="text"
+      />
+    </div>
+    <div className="center-btn">
+      {submitting ? (
+        <Loading />
+      ) : (
+        <button className="form-submit form-submit-title" type="submit">
+          <FormattedMessage id="signup.form.submit" />
+        </button>
+      )}
+    </div>
   </form>
 );
 

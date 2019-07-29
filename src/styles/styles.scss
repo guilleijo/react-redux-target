@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 @import '~loaders.css/src/animations/ball-scale-multiple';
 @import 'settings';
+
+$white: #ffffff;
+$black: #000000;
+$bright-sky-blue: #2fbcf7;
 
 html {
   font-size: 10px;
@@ -7,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,6 +31,8 @@ body {
 }
 
 .loading-wrapper {
+  margin: 0 auto;
+
   align-items: center;
   display: flex;
   height: 5rem;
@@ -48,4 +55,115 @@ body {
   &__logo {
     width: 150px;
   }
+}
+
+.wrapper {
+  display: flex;
+  // width: 1366px;
+  // height: 768px;
+}
+
+.left {
+  flex: 1;
+}
+
+#right {
+  flex: 1;
+  background: $bright-sky-blue;
+}
+
+@media screen and (max-width: 600px) {
+  #right {
+    visibility: hidden;
+    flex: 0;
+  }
+}
+
+.form-label {
+  margin-top: 17px;
+  margin-bottom: 3px;
+  height: 15px;
+  font-size: 11px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.65px;
+  text-align: center;
+  color: $black;
+  text-transform: uppercase;
+}
+
+.form-input {
+  font-weight: normal;
+  margin: 0 auto;
+  width: 180px;
+  height: 37px;
+  border: solid 0.5px #060606;
+  text-align: center;
+}
+
+.form-select {
+  text-align: center;
+  margin: 0 auto;
+  width: 180px;
+  height: 37px;
+  border: solid 0.5px #060606;
+}
+
+.sign-up {
+  margin: 0 auto;
+  padding-top: 108px;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 3px;
+  color: $black;
+}
+
+.form-submit {
+  margin: 0 auto;
+  width: 180px;
+  height: 37px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  background-color: $black;
+}
+
+.form-submit-title {
+  background-color: $black;
+  font-size: 11px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.65px;
+  text-align: center;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.center-btn {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.divider {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 121px;
+  height: 0.5px;
+  border: solid 0.5px var $black;
+}
+
+.link {
+  color: $black;
+  text-decoration: none;
 }

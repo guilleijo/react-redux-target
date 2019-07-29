@@ -2,15 +2,19 @@ export default {
   'login.title': 'LOGIN',
   'login.signup': 'Sign up',
 
+  'login.form.name': 'Name',
   'login.form.email': 'Email',
   'login.form.password': 'Password',
-  'login.form.submit': 'Submit',
+  'login.form.gender': 'Gender',
+  'login.form.submit': 'Sign in',
+  'signup.form.submit': 'Sign up',
 
   'login.forgot_password': 'Forgot your password?',
 
   'signup.title': 'SIGN UP',
   'signup.signin': 'Sign in',
-  'signup.form.passconfirmation': 'Password confirmation',
+  'signup.form.passpalceholder': 'MIN. 8 CHARACTERS LONG',
+  'signup.form.passconfirmation': 'Confirm password',
 
   'logout.button': 'LOGOUT',
 
