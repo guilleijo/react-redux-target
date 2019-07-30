@@ -21,7 +21,12 @@ const messages = defineMessages({
 export const SignUpForm = ({ handleSubmit, submitting, intl }) => (
   <form onSubmit={handleSubmit}>
     <div>
-      <Field name="name" label={intl.formatMessage(messages.name)} component={Input} type="text" />
+      <Field
+        name="first_name"
+        label={intl.formatMessage(messages.name)}
+        component={Input}
+        type="text"
+      />
     </div>
     <div>
       <Field

@@ -1,5 +1,5 @@
 export default {
-  'login.title': 'LOGIN',
+  'login.title': 'TARGET MVD',
   'login.signup': 'Sign up',
 
   'login.form.name': 'Name',

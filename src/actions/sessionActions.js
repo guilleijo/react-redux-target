@@ -9,7 +9,7 @@ export const login = user => async () => {
     sessionService.saveUser(response.user);
   } catch (err) {
     throw new SubmissionError({
-      _error: err.error
+      password: err.errors
     });
   }
 };
