@@ -6,6 +6,7 @@ export default {
   'login.form.email': 'Email',
   'login.form.password': 'Contraseña',
   'login.form.gender': 'Sexo',
+  'login.form.selectgender': 'Elige tu sexo',
   'login.form.submit': 'Continuar',
 
   'login.forgot_password': '¿Olvidó su contraseña?',

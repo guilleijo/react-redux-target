@@ -8,7 +8,8 @@ const Select = ({ input, label, type, placeholder, meta: { touched, error } }) =
   <div>
     <div>{label && <label className="form-label">{label}</label>}</div>
     <div>
-      <select className="form-select" {...input} {...{ placeholder, type }}>
+      <select className="form-input" {...input} {...{ placeholder, type }}>
+        <option value="">{placeholder.toUpperCase()}</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
         <option value="other">Other</option>

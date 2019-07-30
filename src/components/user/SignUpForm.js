@@ -14,7 +14,8 @@ const messages = defineMessages({
   password: { id: 'login.form.password' },
   passPlaceholder: { id: 'signup.form.passpalceholder' },
   passConfirmation: { id: 'signup.form.passconfirmation' },
-  gender: { id: 'login.form.gender' }
+  gender: { id: 'login.form.gender' },
+  selectGender: { id: 'login.form.selectgender' }
 });
 
 export const SignUpForm = ({ handleSubmit, submitting, intl }) => (
@@ -50,16 +51,17 @@ export const SignUpForm = ({ handleSubmit, submitting, intl }) => (
     <div>
       <Field
         name="gender"
+        type="select"
         label={intl.formatMessage(messages.gender)}
         component={Select}
-        type="text"
+        placeholder={intl.formatMessage(messages.selectGender)}
       />
     </div>
-    <div className="center-btn">
+    <div>
       {submitting ? (
         <Loading />
       ) : (
-        <button className="form-submit form-submit-title" type="submit">
+        <button className="submit" type="submit">
           <FormattedMessage id="signup.form.submit" />
         </button>
       )}

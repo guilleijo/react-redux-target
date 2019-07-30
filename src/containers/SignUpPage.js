@@ -18,21 +18,21 @@ const SignUpPage = () => {
   }
 
   return (
-    <div className="wrapper">
-      <div className="left">
-        <p className="center sign-up" style={{ marginBottom: 38 }}>
+    <div className="wrapper center">
+      <div className="sign-up-form left">
+        <p className="title" style={{ marginBottom: 38 }}>
           <FormattedMessage id="signup.title" />
         </p>
         <SignUpForm onSubmit={signUpRequest} />
         <Divider />
-        <div className="center form-label">
+        <div className="form-label">
           <Link className="link" to={routes.login}>
             <FormattedMessage id="signup.signin" />
           </Link>
         </div>
       </div>
       <div
-        id="right"
+        className="right"
         style={{
           display: 'flex',
           justifyContent: 'center',
