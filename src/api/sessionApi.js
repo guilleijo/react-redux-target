@@ -12,6 +12,10 @@ class Session {
   static signUp(user) {
     return api.post('/users', user);
   }
+
+  static facebookLogin(accessToken) {
+    return api.post('/users/facebook', accessToken);
+  }
 }
 
 export default Session;

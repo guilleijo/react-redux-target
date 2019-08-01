@@ -1,6 +1,11 @@
 export default {
   'login.title': 'TARGET MVD',
   'login.signup': 'Registrarse',
+  'login.facebook': 'Conéctate con Facebook',
+  'login.facebookerror': 'Error al conectarse con Facebook',
+  'login.subtitle': 'Encuentra gente cerca & Conecta',
+  'login.description':
+    'Crea un target en el mapa, especifica tu interes: Viajes, Citas, Música, etc. y comienza a conectarte con otros que comparten tus intereses.',
 
   'login.form.name': 'Nombre',
   'login.form.email': 'Email',

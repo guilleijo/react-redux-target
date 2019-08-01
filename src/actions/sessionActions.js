@@ -23,3 +23,15 @@ export const logout = () => async () => {
     throw err;
   }
 };
+
+export const facebookLogin = facebookResponse => async () => {
+  try {
+    const { accessToken } = facebookResponse;
+    const response = await sessionApi.facebookLogin({
+      accessToken
+    });
+    sessionService.saveUser(response.user);
+  } catch (err) {
+    throw err.error;
+  }
+};

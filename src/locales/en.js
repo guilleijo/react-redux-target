@@ -1,6 +1,11 @@
 export default {
   'login.title': 'TARGET MVD',
   'login.signup': 'Sign up',
+  'login.facebook': 'Connect with Facebook',
+  'login.facebookerror': 'Error when connecting with Facebook',
+  'login.subtitle': 'Find people near you & Connect',
+  'login.description':
+    'Create a target wherever on the map, specify your interest: Travel, Dating, Music, etc. and start conecting with others who share your interest.',
 
   'login.form.name': 'Name',
   'login.form.email': 'Email',

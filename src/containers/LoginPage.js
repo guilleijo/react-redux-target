@@ -6,6 +6,7 @@ import smilies from 'assets/smilies.svg';
 
 import { useSession, useDispatch } from 'hooks';
 import LoginForm from 'components/user/LoginForm';
+import LoginWithFacebook from 'components/user/LoginWithFacebook';
 import { login } from 'actions/sessionActions';
 import routes from 'constants/routesPaths';
 import Divider from '../components/common/Divider';
@@ -25,16 +26,17 @@ const LoginPage = () => {
         <p className="title" style={{ marginTop: 20 }}>
           <FormattedMessage id="login.title" />
         </p>
-        <div>
-          <p className="subtitle">Find people near you & Connect</p>
-        </div>
-        <div>
-          <p className="description">
-            Create a target wherever on the map, specify your interest: Travel, Dating, Music, etc
-            and start conecting with others who share your interest.
-          </p>
-        </div>
+
+        <p className="subtitle">
+          <FormattedMessage id="login.subtitle" />
+        </p>
+
+        <p className="description">
+          <FormattedMessage id="login.description" />
+        </p>
+
         <LoginForm onSubmit={loginRequest} />
+        <LoginWithFacebook />
         <Divider />
         <div className="form-label">
           <Link className="link" to={routes.signUp}>
