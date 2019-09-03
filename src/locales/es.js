@@ -1,9 +1,17 @@
 export default {
-  'login.title': 'INICIAR SESIÓN',
+  'login.title': 'TARGET MVD',
   'login.signup': 'Registrarse',
+  'login.facebook': 'Conéctate con Facebook',
+  'login.facebookerror': 'Error al conectarse con Facebook',
+  'login.subtitle': 'Encuentra gente cerca & Conecta',
+  'login.description':
+    'Crea un target en el mapa, especifica tu interes: Viajes, Citas, Música, etc. y comienza a conectarte con otros que comparten tus intereses.',
 
+  'login.form.name': 'Nombre',
   'login.form.email': 'Email',
   'login.form.password': 'Contraseña',
+  'login.form.gender': 'Sexo',
+  'login.form.selectgender': 'Elige tu sexo',
   'login.form.submit': 'Continuar',
 
   'login.forgot_password': '¿Olvidó su contraseña?',
@@ -14,6 +22,7 @@ export default {
   'signup.title': 'REGISRARSE',
   'signup.signin': 'Iniciar Sesión',
   'signup.form.passconfirmation': 'Confirmación de Contraseña',
+  'signup.form.passpalceholder': 'MIN. 8 CARACTERES DE LARGO',
   'signup.form.confirmation.presence': 'Debe confirmar su contraseña para continuar',
   'signup.form.confirmation.equality':
     'Su confirmación de contraseña debe ser igual a la contraseña',

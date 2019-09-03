@@ -31,10 +31,15 @@ export const LoginForm = ({ handleSubmit, error, submitting, intl }) => (
         type="password"
       />
     </div>
-    <button type="submit">
-      <FormattedMessage id="login.form.submit" />
-    </button>
-    {submitting && <Loading />}
+    <div>
+      {submitting ? (
+        <Loading />
+      ) : (
+        <button className="submit" type="submit">
+          <FormattedMessage id="login.form.submit" />
+        </button>
+      )}
+    </div>{' '}
   </form>
 );
 

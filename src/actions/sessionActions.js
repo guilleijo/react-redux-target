@@ -9,7 +9,7 @@ export const login = user => async () => {
     sessionService.saveUser(response.user);
   } catch (err) {
     throw new SubmissionError({
-      _error: err.error
+      password: err.errors
     });
   }
 };
@@ -21,5 +21,17 @@ export const logout = () => async () => {
     sessionService.deleteUser();
   } catch (err) {
     throw err;
+  }
+};
+
+export const facebookLogin = facebookResponse => async () => {
+  try {
+    const { accessToken } = facebookResponse;
+    const response = await sessionApi.facebookLogin({
+      accessToken
+    });
+    sessionService.saveUser(response.user);
+  } catch (err) {
+    throw err.error;
   }
 };
